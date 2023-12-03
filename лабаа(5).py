@@ -1,8 +1,7 @@
+
 class Sneakers:
-    def __init__(self, brand, size, color, price, quantity, material, numberOfSales):
-        self.brand = brand
-        self.size = size
-        self.color = color
+    
+    def __init__(self, price, quantity, numberOfSales):
         self.price = price
         self.quantity = quantity
         self.material = material
@@ -49,5 +48,6 @@ def main():
     print("\nТоп 5 за популярністю:")
     for sneaker in top_sneakers:
 
-if __name__ == __main__
+if __name__ == "__main__"
+    (main)
 
