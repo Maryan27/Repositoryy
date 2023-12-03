@@ -1,10 +1,10 @@
 
 class Sneakers:
     
-    def __init__(self, price, quantity, numberOfSales):
+    def __init__(self, brand, price, quantity, numberOfSales):
+        self.brand = brand
         self.price = price
         self.quantity = quantity
-        self.material = material
         self.numberOfSales = numberOfSales
 
     
@@ -22,14 +22,15 @@ class SportShoesStore:
         self.inventory.sort(key=lambda x: x.quantity, reverse=True)
 
     def top_sneakers(self, n=5):
+         ''' Повертає топ-N кросівок за популярністю (за кількістю продажів).'''
         sorted_inventory = sorted(self.inventory, key=lambda x: x.numberOfSales, reverse=True)
         return sorted_inventory[:n]
 
     
 def main():
 
-    sneaker1 = Sneakers("Nike", 45, "Чорний", 130, 60, "Шкіра", 110)
-    sneaker2 = Sneakers("Adidas", 44, "Білий", 90, 40, "Фетр", 90)
+    sneaker1 = Sneakers("Nike", 130, 60, 110)
+    sneaker2 = Sneakers("Adidas", 90, 40, 90)
 
     store = SportShoesStore()
     store.add_sneakers(sneaker1)
@@ -47,7 +48,9 @@ def main():
     top_sneakers = store.top_sneakers()
     print("\nТоп 5 за популярністю:")
     for sneaker in top_sneakers:
+        print(sneaker.brand)
+        
 
-if __name__ == "__main__"
-    (main)
+if __name__ == "__main__":
+    main()
 
