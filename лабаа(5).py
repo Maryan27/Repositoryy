@@ -1,4 +1,3 @@
-
 class Sneakers:
     
     def __init__(self, brand, price, quantity, numberOfSales):
@@ -29,7 +28,7 @@ class SportShoesStore:
     
 def main():
 
-    sneaker1 = Sneakers("Nike", 130, 60, 110)
+    sneaker1 = Sneakers("Nike", 130, 70, 110)
     sneaker2 = Sneakers("Adidas", 90, 40, 90)
 
     store = SportShoesStore()
